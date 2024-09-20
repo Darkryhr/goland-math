@@ -1,0 +1,305 @@
+$accent: #5552ff;
+$accent-secondary: #172ad3;
+
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/*
+  2. Remove default margin
+*/
+* {
+  margin: 0;
+}
+
+/*
+  Typographic tweaks!
+  3. Add accessible line-height
+  4. Improve text rendering
+*/
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+/*
+  5. Improve media defaults
+*/
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/*
+  6. Remove built-in form typography styles
+*/
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  background: none;
+  border: none;
+  font-family: 'Rubik', sans-serif;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+/*
+  7. Avoid text overflows
+*/
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+  text-align: center;
+}
+
+p,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'IBM Plex Sans Hebrew', sans-serif;
+}
+
+h1,
+h2 {
+  font-family: 'Rubik', sans-serif;
+  color: $accent;
+}
+
+h2 {
+  margin-bottom: 1.2em;
+  font-size: 2em;
+}
+
+p {
+  margin: 0 auto;
+  font-size: 1.2em;
+}
+
+section {
+  padding: 2em 0;
+}
+
+/*
+  8. Create a root stacking context
+*/
+#root,
+#__next {
+  isolation: isolate;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  padding: 5em 1em 5em 1em;
+}
+
+.bg {
+  background-image: url('../BgImg.jpg');
+  background-position: center; /* Centers the image */
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.inner {
+  display: flex;
+  width: 32rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #f0f0f0;
+  border-radius: 20px;
+
+  p {
+    width: 70%;
+  }
+
+  .about {
+    margin: 1em 0;
+  }
+
+  .testimonials {
+    margin: 1em 0;
+  }
+}
+
+.divider {
+  height: 3px;
+  width: 100%;
+  background: #d8d8d8;
+  margin: 1.5em 0;
+}
+
+.profile {
+  h3 {
+    font-weight: 400;
+    font-size: 1.5em;
+  }
+
+  h1 {
+    font-size: 4.2em;
+  }
+
+  .avatar {
+    width: 120px;
+    height: 120px;
+    background: #9c9c9c;
+    border-radius: 50%;
+    margin: 1.5em auto 2em auto;
+  }
+
+  h4 {
+    font-size: 1.35em;
+    font-weight: 400;
+    // padding: 0 8vw;
+  }
+}
+
+.CTA__top {
+  div {
+    margin: 0 auto;
+    width: 110px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    div {
+      height: 1px;
+      width: 28px;
+      background: $accent-secondary;
+    }
+  }
+
+  button {
+    font-size: 1.2rem;
+    padding: 1rem 0;
+    width: 320px;
+    border-radius: 10px;
+    &:first-of-type {
+      color: $accent;
+      border: 2px $accent solid;
+    }
+    &:last-of-type {
+      background-color: #11b74f;
+      color: #fff;
+      display: flex;
+      flex-direction: row-reverse;
+      align-items: center;
+      justify-content: space-around;
+      padding: 1rem 3rem;
+      span {
+        svg {
+          width: 1.2em;
+          height: 1.2em;
+          fill: #fff;
+        }
+      }
+    }
+  }
+
+  h4 {
+    margin: 0.8em 0;
+    color: $accent-secondary;
+    font-size: 1.2em;
+    font-weight: 700;
+  }
+}
+
+.arrow {
+  margin: 2.5em 0;
+  width: 5em;
+  height: 5em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: $accent;
+  border-radius: 50%;
+  svg {
+    width: 48px;
+    height: 48px;
+    stroke: #fff;
+    fill: #fff;
+  }
+}
+
+.review-stars {
+  display: flex;
+  margin-top: 3em;
+  justify-content: center;
+  svg {
+    width: 36px;
+    height: 36px;
+    fill: #79d431;
+  }
+}
+
+.CTA__bottom {
+  width: 100%;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  .CTA__bottom--center {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding-top: 0.7em;
+    button {
+      font-size: 1.2rem;
+      &:first-of-type {
+        background-color: #11b74f;
+        width: 90px;
+        height: 90px;
+        border-bottom-left-radius: 20px;
+        padding: 1.4em;
+        svg {
+          fill: #fff;
+        }
+      }
+      &:last-of-type {
+        flex: 1;
+        background-color: $accent;
+        color: #fff;
+        border-bottom-right-radius: 20px;
+      }
+    }
+  }
+}
+
+footer {
+  margin-top: 3em;
+  color: #fff;
+  font-weight: 800;
+  font-size: 0.8em;
+  display: flex;
+  align-items: center;
+  div {
+    margin-left: 0.5em;
+    svg {
+      width: 25px;
+      height: 25px;
+      fill: #fff;
+    }
+  }
+}
