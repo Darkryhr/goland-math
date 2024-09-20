@@ -127,6 +127,7 @@ main {
 .inner {
   display: flex;
   width: 32rem;
+  max-width: 100%;
   flex-direction: column;
   justify-content: center;
   align-items: center;
