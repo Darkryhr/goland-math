@@ -1,3 +1,5 @@
+import './style.scss';
+
 // add blur and effect on top of background
 // make arrow button functional
 // animations:
