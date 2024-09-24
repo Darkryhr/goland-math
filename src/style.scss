@@ -97,7 +97,6 @@ h2 {
 }
 
 h2 {
-  margin-bottom: 1.2em;
   font-size: 2em;
 }
 
@@ -178,17 +177,22 @@ main {
   .testimonials {
     margin: 1em 0;
     width: 70%;
-
+    position: relative;
     p {
       width: 100%;
       font-weight: 800;
     }
 
-    section {
-      display: flex;
+    .active {
+      display: flex !important;
+    }
+
+    .quote {
       flex-direction: column;
       align-items: center;
-
+      justify-content: center;
+      min-height: 354px;
+      transition: all ease 2s;
       svg {
         fill: $accent;
         height: 72px;
@@ -224,6 +228,24 @@ main {
 
       &:first-of-type {
         padding-top: 0;
+      }
+    }
+
+    .button__container {
+      position: absolute;
+      display: flex;
+      width: 133%;
+      justify-content: space-between;
+      left: 50%;
+      top: 50%;
+      transform: translateX(-50%) translateY(-50%);
+      button {
+        border: none;
+        color: $accent;
+        svg {
+          width: 30px;
+          height: 30px;
+        }
       }
     }
   }
