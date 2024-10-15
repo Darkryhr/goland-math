@@ -166,10 +166,10 @@ main {
   width: 100%;
   justify-content: center;
   align-items: center;
-  padding: 1em 1em 2em 1em;
+  padding: 1.5em 1em 2em 1em;
 
   @include respond-to('small') {
-    padding: 3em 1em 4em 1em;
+    padding: 3em 1em 2em 1em;
   }
 }
 
@@ -321,7 +321,9 @@ main {
   height: 3px;
   width: 100%;
   background: #d8d8d8;
-  margin: 1.5em 0;
+  @include respond-to('small') {
+    margin: 1.5em 0;
+  }
 }
 
 .profile {
@@ -340,6 +342,9 @@ main {
     background: #9c9c9c;
     border-radius: 50%;
     margin: 1.5em auto 2em auto;
+    img {
+      border-radius: 50%;
+    }
   }
 
   h4 {
@@ -404,7 +409,7 @@ main {
 }
 
 .arrow {
-  margin: 2.5em 0;
+  margin-top: 2em;
   width: 5em;
   height: 5em;
   display: flex;
@@ -423,6 +428,10 @@ main {
 
   &:hover {
     scale: 1.1;
+  }
+
+  @include respond-to('small') {
+    margin: 2.35em 0 0.7em 0;
   }
 }
 
