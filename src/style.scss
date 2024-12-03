@@ -225,22 +225,27 @@ main {
     margin: 1em 0;
     width: 70%;
     position: relative;
-    height: 400px;
+    justify-content: center;
+    height: clamp(330px, 400px, 500px);
     p {
-      width: 100%;
       font-weight: 800;
+      font-size: 0.9em;
+      @include respond-to('small') {
+        font-size: 1em;
+      }
+    }
+
+    @include respond-to('small') {
+      width: 70%;
     }
 
     .quote {
       flex-direction: column;
       align-items: center;
       justify-content: space-between;
-      min-height: 330px;
       padding: 0 1em;
       position: absolute;
-      // transform: translateX(-50%);
       opacity: 0;
-
       transition: all 0.65s ease-in-out;
 
       svg {
@@ -258,7 +263,7 @@ main {
         flex-direction: row-reverse;
         justify-content: center;
         align-items: center;
-        margin-top: 2em;
+        margin-top: 1.2em;
         svg {
           height: 20px;
           width: 20px;
@@ -295,7 +300,7 @@ main {
       width: 133%;
       justify-content: space-between;
       left: 50%;
-      top: 50%;
+      top: 60%;
       transform: translateX(-50%) translateY(-50%);
       button {
         border: none;
@@ -306,6 +311,14 @@ main {
           height: 30px;
         }
       }
+
+      @include respond-to('small') {
+        top: 50%;
+      }
+    }
+
+    @include respond-to('small') {
+      height: 400px;
     }
   }
 }
@@ -502,6 +515,10 @@ main {
         }
       }
     }
+  }
+
+  @include respond-to('small') {
+    margin-top: 0;
   }
 }
 
