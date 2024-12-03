@@ -62,6 +62,10 @@ body {
   overflow-x: hidden;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body,
 html {
   height: 100%;
@@ -221,13 +225,10 @@ main {
     margin: 1em 0;
     width: 70%;
     position: relative;
+    height: 400px;
     p {
       width: 100%;
       font-weight: 800;
-    }
-
-    .active {
-      display: flex !important;
     }
 
     .quote {
@@ -235,14 +236,20 @@ main {
       align-items: center;
       justify-content: space-between;
       min-height: 330px;
-      transition: all ease 2s;
       padding: 0 1em;
+      position: absolute;
+      // transform: translateX(-50%);
+      opacity: 0;
+
+      transition: all 0.65s ease-in-out;
 
       svg {
         fill: $accent;
         height: 72px;
         width: 72px;
-        margin-right: -0.7em;
+        left: 0;
+        right: 0;
+        margin: auto;
         margin-bottom: 1em;
       }
 
@@ -275,6 +282,11 @@ main {
       &:first-of-type {
         padding-top: 0;
       }
+    }
+
+    .active {
+      opacity: 1;
+      // transform: translateX(0);
     }
 
     .button__container {
